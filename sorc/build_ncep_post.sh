@@ -41,6 +41,8 @@ elif [ $mac2 = hf ] ; then                        # For Hera
 fi
 
 # Lin Gan modifiy to use NCO vertical structure prefix for NCO deployment - 20160131
+export NCEPLIBS=/gpfs/dell2/emc/modeling/noscrub/cases/lt/p/lib/
+
 moduledir=`dirname $(readlink -f ../modulefiles/post)`
 module use ${moduledir}
 module load post/v8.0.0-${machine}
