@@ -32,7 +32,10 @@ status=$?
 ##############################################
 export pid=${pid:-$$}
 export outid=${outid:-"LL$job"}
-export DATA=${DATA:-${DATAROOT}/${jobid:?}}
+export jobid=${jobid:-"${outid}.o${pid}"}   #JW added
+export DATAROOT="$RUNDIR/$CDATE/$CDUMP"  #JW added
+export DATA="$DATAROOT/post$FHRGRP"      #JW added
+#export DATA=${DATA:-${DATAROOT}/${jobid:?}}
 mkdir -p $DATA
 cd $DATA
 
